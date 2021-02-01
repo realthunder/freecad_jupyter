@@ -22,9 +22,9 @@ def run_kernel():
         from pathlib import Path
         p = sys.base_exec_prefix+"/"
         print(p)
-        sys.path += [p+"Ext", p+"lib", p+"libexec"]
+        sys.path += [p+"Ext", p+"lib", p+"lib64", p+"libexec"]
 
-        import FreeCAD as app
+        import FreeCAD as App
         from IPython.external.qt_loaders import ImportDenier
         if isinstance(sys.meta_path[0], ImportDenier):
             del(sys.meta_path[0])
